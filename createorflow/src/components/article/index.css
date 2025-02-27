@@ -1,0 +1,326 @@
+.article_div {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.transition_div {
+    display: flex;
+    padding: 20px 20px;
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+
+    justify-content: space-around;
+}
+
+.transition_div>div {
+    display: flex;
+}
+
+.transition_div>div>div>p {
+    opacity: 0.3;
+    font-size: 10px;
+}
+
+.transition_buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.transition_buttons>button {
+    padding: 0 30px;
+    height: 30px;
+    border-radius: 8px;
+    width: 250px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.transition_buttons>button:first-child {
+    background-color: #2b0f4d;
+}
+
+.transition_buttons>button:last-child {
+    background-color: #f53361;
+}
+
+.first_charts {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.BarChart {
+    background-color: white;
+    border-radius: 25px;
+
+}
+
+.pieChart {
+    background-color: white;
+    border-radius: 25px;
+
+
+}
+
+.MuiChartsAxis-tickLabel {
+    font-size: 8px !important;
+    opacity: 0.3;
+}
+
+.css-66gjpw-MuiResponsiveChart-container {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.MuiChartsLegend-root {
+    margin-left: 20px;
+
+}
+
+select {
+    margin-left: 10px;
+    border: none;
+}
+
+.BarChart>span {
+    margin-left: 20px;
+    opacity: 0.3;
+}
+
+.pieChart>span {
+    margin-left: 20px;
+    opacity: 0.3;
+}
+
+.linerChart {
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 25px;
+
+}
+
+.recent_transitions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.recent_transitions_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent_transitions_title>span {
+    margin-left: 20px;
+    opacity: 0.3;
+}
+
+.review_tasks {
+    width: 60%;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.review_tasks>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.review_tasks>div>span {
+    color: #A3A6B9;
+}
+
+
+
+
+.slide_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 15px;
+    box-shadow: 0px 3px 26px #0000001A;
+}
+
+.slide_container_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.slide_container_header>h4 {
+    font-size: 12px;
+
+}
+
+.slide_container_header>h4:first-child {
+    color: #43BCCD;
+}
+
+.slide_container_title {
+    font-size: 26px;
+    text-align: left;
+    color: #05081D;
+    font: normal normal bold 26px/50px Circular;
+}
+
+.slide_container_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.slide_container_content>div>h4 {
+    color: #43BCCD;
+    font-size: 12px;
+
+}
+
+.slide_container_content>div>p {
+    color: #A3A6B9;
+    font: normal normal normal 13px/22px Circular;
+    font-size: 13px;
+}
+
+.slide_container_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current_state {
+    width: 40%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+}
+.current_state>span{
+    color: #A3A6B9;
+}
+.current_state_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.current_state_content_item{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.current_state_content_item>img{
+    width: 37px;
+height: 54px;
+}
+.current_state_content_item>div>h4{
+    font-size:60px ;
+}
+
+.current_state_content_item>div>p{
+    color: #A3A6B9;
+}
+.current_state_content_item2{
+    margin-top: 58px;
+    display: flex;
+    justify-content: space-around;
+}
+.current_state_content_item2_child{
+    display: flex;
+    gap: 10px;
+}
+.current_state_content_item2_child>p{
+
+    font-size: 13px;
+}
+.current_state_content_item2_child>p:first-child{
+    color: #05081D;
+    font-weight: 700;
+}
+.current_state_content_item2_child>p:last-child{
+    color: #6A6C78
+}
+
+/* Стиль для контейнера, который будет располагаться внизу */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: absolute; /* Позволяет расположить их внизу */
+    bottom: 0; /* Отступ от нижней части слайдера */
+    width: 100%;
+}
+
+/* Обеспечиваем, что слайдер будет иметь позицию относительно */
+.slide_container {
+    position: relative;
+    padding-bottom: 40px; /* Местом для пагинации */
+}
+
+.pagination-dots div {
+    transition: background-color 0.3s ease;
+}
+/* Для планшетов */
+@media (max-width: 1024px) {
+    .first_charts {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .BarChart, .pieChart, .review_tasks, .current_state {
+        width: 100%;
+    }
+
+    .linerChart {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .transition_div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .transition_buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .transition_buttons > button {
+        width: 100%;
+    }
+
+    .slide_container_content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .slide_container_footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .current_state_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .current_state_content_item2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+

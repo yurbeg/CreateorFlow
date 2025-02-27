@@ -1,0 +1,37 @@
+.header_container{
+    width: 100%;
+    border-bottom: 1px solid #6e6e6e8c    ;
+    padding-bottom: 20px;
+}
+.avatart_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.dasboard{
+    margin-top: auto;
+    font-size: 8px;
+    color: #946bbc;
+}
+.avatar{
+    display: flex;
+    gap: 10px;
+}
+.logo_div{
+    display: flex;
+    justify-content: space-between;
+
+}
+.logo_menu{
+    display: flex;
+    gap: 50px;    
+}
+.menu_item>h6{
+    opacity: 0.3;
+    margin-right: 5px;
+    display: inline;
+}
+.menu_item>p{
+    font-weight: 800;
+}
