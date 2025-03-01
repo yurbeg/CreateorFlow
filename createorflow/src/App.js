@@ -1,30 +1,32 @@
 import Main from './components/main';
 import React from 'react';
-import { Menu, Layout, Button } from "antd";
-import { HomeOutlined, ReloadOutlined, MessageOutlined, PlusOutlined } from "@ant-design/icons";
-import logo from "./images/logo.png"
+import { Menu, Layout } from "antd";
+import logo from "./images/logo.png";
+import reload from "./images/reload.png";
+import homeIcon from "./images/homeIcon.png";
+import supportIcon from './images/supportIcon.png';
+import plusIcon from "./images/plusIcon.png";
 import './App.css';
 
 const { Sider } = Layout;
 
 const menuItems = [
   {
-    icon: <HomeOutlined />,
+    icon: <img src={homeIcon} alt='homeIcon' />,
     label: "Dashboard",
     key: "1"
   },
   {
-    icon: <ReloadOutlined />,
+    icon: <img src={reload} alt='reload' />,
     label: 'Transitions',
     key: "2"
   },
   {
-    icon: <MessageOutlined />,
+    icon: <img src={supportIcon} alt='supportIcon' />,
     label: 'Support',
     key: "3"
   }
 ];
-
 
 function App() {
   return (
@@ -47,23 +49,19 @@ function App() {
               height: "100%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center"
+              justifyContent: "space-evenly"
             }}
           />
-
-          <Button
-            type="primary"
-            shape="circle"
-            icon={<PlusOutlined />}
+          <img
+            src={plusIcon}
+            alt='plus button'
+            className='sider_image'
             style={{
               position: 'absolute',
               bottom: '30px',
               left: '50%',
               transform: 'translateX(-50%)',
-              backgroundColor: '#6d32a5',
-              borderColor: '#6d32a5',
-              color: '#fff',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+              cursor: "pointer",
             }}
           />
         </Sider>

@@ -5,33 +5,35 @@
 
 .transition_div {
     display: flex;
-    padding: 20px 20px;
+    padding: 10px;
     display: flex;
     background-color: white;
-    border-radius: 25px;
-
-    justify-content: space-around;
+    border-radius: 30px;
+    justify-content: space-between;
 }
 
 .transition_div>div {
     display: flex;
 }
-
+.transition_div>div>div>h4{
+    font-size: 26px;
+}
 .transition_div>div>div>p {
     opacity: 0.3;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 .transition_buttons {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
 .transition_buttons>button {
     padding: 0 30px;
-    height: 30px;
-    border-radius: 8px;
-    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    width: 300px;
     color: white;
     border: none;
     cursor: pointer;
@@ -51,17 +53,20 @@
     gap: 30px;
 }
 
-.BarChart {
-    background-color: white;
-    border-radius: 25px;
 
+.BarChart {
+    width: 65%;
+  overflow: hidden;
+    background-color: white;
+    border-radius: 30px;
+    
 }
 
 .pieChart {
+    width: 35%;
+    overflow: hidden;
     background-color: white;
-    border-radius: 25px;
-
-
+    border-radius: 30px;
 }
 
 .MuiChartsAxis-tickLabel {
@@ -98,16 +103,19 @@ select {
     width: 100%;
     margin-top: 20px;
     background-color: white;
-    border-radius: 25px;
-
-}
-
+    border-radius: 30px;
+    padding: 10px;
+  }
+  
 .recent_transitions {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     background-color: white;
+    border-radius: 30px;
+    padding: 15px;
+
 }
 
 .recent_transitions_title {
@@ -121,7 +129,7 @@ select {
 }
 
 .review_tasks {
-    width: 60%;
+    width: 65%;
     background-color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -191,14 +199,22 @@ select {
     font: normal normal normal 13px/22px Circular;
     font-size: 13px;
 }
+.slide_container_content>div:last-child{
+    display: flex;
+    gap: 5px;
 
+}
+.slide_container_content>div:last-child>img{
+    width: 56px;
+    height: 56px;
+}
 .slide_container_footer {
     display: flex;
     justify-content: space-between;
 }
 
 .current_state {
-    width: 40%;
+    width: 35%;
     background-color: white;
     border-radius: 30px;
     padding: 10px;
@@ -250,77 +266,242 @@ height: 54px;
     color: #6A6C78
 }
 
-/* Стиль для контейнера, который будет располагаться внизу */
 .pagination-dots {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    position: absolute; /* Позволяет расположить их внизу */
-    bottom: 0; /* Отступ от нижней части слайдера */
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
-/* Обеспечиваем, что слайдер будет иметь позицию относительно */
 .slide_container {
     position: relative;
-    padding-bottom: 40px; /* Местом для пагинации */
+    padding-bottom: 40px; 
 }
 
 .pagination-dots div {
     transition: background-color 0.3s ease;
 }
-/* Для планшетов */
+
+.slideLeft {
+    animation-name: slideLeft;
+    -webkit-animation-name: slideLeft;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+    animation-delay: 1ms;
+  }
+  .task_approval{
+        width: 40%;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        min-width: 300px ;
+    }
+  
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(-8%);
+    }
+    65% {
+      transform: translateX(4%);
+    }
+    80% {
+      transform: translateX(-4%);
+    }
+    95% {
+      transform: translateX(2%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+
+  .slideRight {
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+    animation-delay: 1ms;
+  }
+  
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-40%);
+    }
+    50% {
+      transform: translateX(8%);
+    }
+    65% {
+      transform: translateX(-4%);
+    }
+    80% {
+      transform: translateX(4%);
+    }
+    95% {
+      transform: translateX(-2%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @-webkit-keyframes slideLeft {
+    0% {
+      -webkit-transform: translateX(150%);
+    }
+    50% {
+      -webkit-transform: translateX(-8%);
+    }
+    65% {
+      -webkit-transform: translateX(4%);
+    }
+    80% {
+      -webkit-transform: translateX(-4%);
+    }
+    95% {
+      -webkit-transform: translateX(2%);
+    }
+    100% {
+      -webkit-transform: translateX(0%);
+    }
+  }
+
 @media (max-width: 1024px) {
-    .first_charts {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .BarChart, .pieChart, .review_tasks, .current_state {
-        width: 100%;
-    }
-
-    .linerChart {
-        width: 100%;
-        overflow-x: auto;
-    }
-}
-
-/* Для мобильных устройств */
-@media (max-width: 768px) {
     .transition_div {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      flex-direction: column;
+      gap: 15px;
     }
-
+  
     .transition_buttons {
-        flex-direction: column;
-        gap: 10px;
+      width: 100%;
+      justify-content: space-between;
     }
-
+  
     .transition_buttons > button {
+      width: 48%; 
+    }
+  
+    .first_charts {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .BarChart,
+    .pieChart {
+      width: 100%;
+    }
+  
+    .review_tasks {
+      width: 100%;
+    }
+  
+    .current_state {
+      width: 100%;
+    }
+  
+    .current_state_content {
+      gap: 50px;
+    }
+  
+    .current_state_content_item > div > h4 {
+      font-size: 40px;
+    }
+    .task_approval{
         width: 100%;
     }
-
+  }
+  
+  @media (max-width: 768px) {
+    .transition_div > div > div > h4 {
+      font-size: 20px;
+    }
+  
+    .transition_div > div > div > p {
+      font-size: 12px;
+    }
+  
+    .transition_buttons > button {
+      font-size: 12px;
+      padding: 0 15px;
+    }
+  
+    .slide_container_title {
+      font-size: 20px;
+    }
+  
     .slide_container_content {
-        flex-direction: column;
-        gap: 10px;
+      flex-direction: column;
+      gap: 15px;
     }
-
+  
+    .slide_container_content > div:last-child > img {
+      width: 40px;
+      height: 40px;
+    }
     .slide_container_footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .current_state_content {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 20px;
     }
-
-    .current_state_content_item2 {
-        flex-direction: column;
-        gap: 10px;
+  
+    .current_state_content {
+      flex-direction: column;
+      gap: 20px;
     }
-}
-
+  
+    .current_state_content_item {
+      margin-top: 20px;
+    }
+  
+    .current_state_content_item > div > h4 {
+      font-size: 30px;
+    }
+  
+    .current_state_content_item2 {
+      flex-direction: column;
+      gap: 10px;
+    }
+   
+  }
+  
+  @media (max-width: 480px) {
+    .transition_div > div > div > h4 {
+      font-size: 18px;
+    }
+  
+    .transition_div > div > div > p {
+      font-size: 11px;
+    }
+  
+    .transition_buttons > button {
+      font-size: 11px;
+      padding: 0 10px;
+    }
+  
+    .slide_container_title {
+      font-size: 18px;
+    }
+  
+    .slide_container_content > div > p {
+      font-size: 11px;
+    }
+  
+    .current_state_content_item > div > h4 {
+      font-size: 24px;
+    }
+  
+    .current_state_content_item2_child > p {
+      font-size: 11px;
+    }
+  }

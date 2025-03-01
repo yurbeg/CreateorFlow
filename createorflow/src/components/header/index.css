@@ -1,37 +1,139 @@
-.header_container{
+.header_container {
     width: 100%;
-    border-bottom: 1px solid #6e6e6e8c    ;
+    border-bottom: 1px solid #6e6e6e8c;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
-.avatart_container{
+
+.avatart_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.dasboard{
+
+.dasboard {
     margin-top: auto;
-    font-size: 8px;
-    color: #946bbc;
+    font-size: 15px;
+    color: #6D32A5;
 }
-.avatar{
+
+.avatar {
     display: flex;
     gap: 10px;
+    align-items: center;
+    cursor: pointer;
 }
-.logo_div{
+
+.logo_div {
     display: flex;
     justify-content: space-between;
+}
 
+.logo>h2 {
+    font-size: 60px;
 }
-.logo_menu{
+
+.logo_menu {
     display: flex;
-    gap: 50px;    
+    gap: 50px;
 }
-.menu_item>h6{
-    opacity: 0.3;
+
+.menu_item>h6 {
+    color: #A3A6B9;
     margin-right: 5px;
     display: inline;
+    font-size: 15px;
 }
-.menu_item>p{
-    font-weight: 800;
+
+.menu_item>p {
+    color: #05081D;
+    font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+    .logo_menu {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo>h2 {
+        font-size: 50px;
+    }
+    
+    .menu_item>p {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_container {
+        padding-bottom: 15px;
+    }
+    
+    .avatart_container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo_div {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .logo_menu {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .menu_item>p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo>h2 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    
+    .logo_menu {
+        gap: 20px;
+    }
+    
+    .menu_item>h6 {
+        font-size: 14px;
+    }
+    
+    .menu_item>p {
+        font-size: 20px;
+    }
+    
+    .avatar {
+        gap: 8px;
+    }
+    
+    .dasboard {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo>h2 {
+        font-size: 34px;
+    }
+    
+    .menu_item>p {
+        font-size: 18px;
+    }
+    
+    .logo_menu {
+        gap: 15px;
+    }
+    
+    .header_container {
+        padding-bottom: 12px;
+        margin-top: 15px;
+    }
 }

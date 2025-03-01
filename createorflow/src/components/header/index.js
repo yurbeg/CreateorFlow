@@ -1,5 +1,6 @@
 import { Avatar } from "antd";
-import { BellOutlined, InfoCircleFilled } from "@ant-design/icons";
+import { InfoCircleFilled } from "@ant-design/icons";
+import bell from "../../images/bell.png"
 import "./index.css";
 
 const menuItems = [
@@ -17,8 +18,8 @@ const Header = () => {
           <p>DASHBOARD</p>
         </div>
         <div className="avatar">
-          <BellOutlined />
-          <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_IbRQvlVj5_heS6MBUBdPrmF7MUJdswsAw&s" />
+          <img src={bell} alt="bell" style={{ width: "29px", height: "33px" }} />
+          <Avatar style={{ width: "66px", height: "66px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_IbRQvlVj5_heS6MBUBdPrmF7MUJdswsAw&s" />
         </div>
       </div>
       <div className="logo_div">

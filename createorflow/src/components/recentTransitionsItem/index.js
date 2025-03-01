@@ -1,33 +1,36 @@
-import { Collapse, Progress } from "antd";
-import { MessageOutlined, DownOutlined, UploadOutlined, EyeOutlined, CheckOutlined } from "@ant-design/icons"
+import { Collapse } from "antd";
+import { DownOutlined, UploadOutlined, EyeOutlined, CheckOutlined } from "@ant-design/icons"
+import messageIcon from "../../images/messageIcon.png"
 import "./index.css"
+
 const RecentTransitionItem = ({ text, color, role, status }) => {
 
     const items = [
         {
             key: '1',
             label: <div className="collapse_container_label">
-                <h3>{text}</h3>
-                <div>
+                <h3 style={{ width: "150px" }}>{text}</h3>
+                <div style={{ width: "100px" }}>
                     <h5 style={{ opacity: "0.3" }}>MY ROLE</h5>
                     <h4>{role}</h4>
                 </div>
-                <div>
+                <div style={{ width: "200px" }}>
                     <h5 style={{ opacity: "0.3" }}> STATUS</h5>
                     <div style={{
                         backgroundColor: `${color}`,
                         color: "white",
                         padding: "5px 15px",
                         borderRadius: "12px"
+                        , textAlign: "center"
                     }}>{status}</div>
                 </div>
                 <div>
                     <h5 style={{ opacity: "0.3" }}>DAYS TO GO</h5>
-                    <h4>26</h4>
+                    <h4 style={{ fontSize: "17px" }}>26</h4>
                 </div>
-                <div>
-                    <span style={{ marginRight: "10px" }}>15</span>
-                    <MessageOutlined />
+                <div style={{ display: 'flex', alignItems: "center" }}>
+                    <span style={{ marginRight: "10px", fontSize: "17px" }}>15</span>
+                    <img src={messageIcon} alt="message Icon" />
                 </div>
             </div>,
             children:
@@ -53,15 +56,21 @@ const RecentTransitionItem = ({ text, color, role, status }) => {
                                 <h4>Vladimir Nikolsky</h4>
                             </div>
                         </div>
-                        <div className="collapse_children_left_progress">
+                        <div className="collapse_children_left_progress" style={{ position: 'relative', marginTop: "5px" }}>
                             <div style={{ color: `${color}`, fontSize: "12px" }}>COMPLETION PERCENTAGE</div>
-                            <Progress percent={100}
-                                percentPosition={{
-                                    align: 'center',
-                                    type: 'inner',
+
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '15px',
+                                    right: '15px',
+                                    fontSize: '14px',
+                                    color: '#000',
+                                    paddingRight: '5px',
                                 }}
-                                size={[800, 15]}
-                                strokeColor={color} style={{ width: "80%" }} />
+                            >
+                                100%
+                            </div> <div className="progress" style={{ backgroundColor: `${color}` }} />
                         </div>
                         <div className="collapse_children_left_numbers">
                             <div>
@@ -79,9 +88,9 @@ const RecentTransitionItem = ({ text, color, role, status }) => {
                         </div>
                     </div>
                     <div className="collapse_children_right">
-                        <UploadOutlined style={{ fontSize: "20px", borderRadius: "100%", border: `1px solid ${color}`, padding: "10px", color: `${color}` }} />
-                        <EyeOutlined style={{ fontSize: "20px", borderRadius: "100%", border: `1px solid ${color}`, padding: "10px", backgroundColor: `${color}`, color: "white" }} />
-                        <CheckOutlined style={{ fontSize: "20px", borderRadius: "100%", border: "1px solid", padding: "10px", backgroundColor: '#2b0f4d', color: "white" }} />
+                        <UploadOutlined style={{ fontSize: "20px", borderRadius: "100%", border: `1px solid ${color}`, padding: "10px", color: `${color}`, width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center" }} />
+                        <EyeOutlined style={{ fontSize: "20px", borderRadius: "100%", border: `1px solid ${color}`, padding: "10px", backgroundColor: `${color}`, color: "white", width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center" }} />
+                        <CheckOutlined style={{ fontSize: "20px", borderRadius: "100%", border: "1px solid", padding: "10px", backgroundColor: '#2b0f4d', color: "white", width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center" }} />
                     </div>
                 </div>
 
